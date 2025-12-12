@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 
+import Image from "next/image";
 // Single-file Next.js "app" router page (app/page.tsx)
 // - Tailwind CSS classes used
 // - Barebones shopping UI for beauty products (10 mock products)
@@ -13,8 +14,7 @@ const PRODUCTS = [
     name: "HydraGlow Face Serum",
     brand: "Lumiere",
     price: 799,
-    image:
-      "https://images.unsplash.com/photo-1580281657524-6f8a2f9f0a2b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1",
+    image: "https://picsum.photos/seed/serum1/800/600",
     desc: "Lightweight serum for daily hydration.",
   },
   {
@@ -31,8 +31,7 @@ const PRODUCTS = [
     name: "Glow Radiance Face Oil",
     brand: "Aurora",
     price: 1299,
-    image:
-      "https://images.unsplash.com/photo-1576671080055-3a9d6a6b8d4e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3",
+    image: "https://picsum.photos/seed/faceoil1/800/600",
     desc: "Nourishing oil for natural glow.",
   },
   {
@@ -49,8 +48,7 @@ const PRODUCTS = [
     name: "Purifying Clay Mask",
     brand: "DeepClean",
     price: 699,
-    image:
-      "https://images.unsplash.com/photo-1556228720-0a0f1b8f9b1f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5",
+    image: "https://picsum.photos/seed/claymask1/800/600",
     desc: "Detoxifies pores and mattifies skin.",
   },
   {
@@ -58,8 +56,7 @@ const PRODUCTS = [
     name: "Soothing Eye Cream",
     brand: "Serein",
     price: 899,
-    image:
-      "https://images.unsplash.com/photo-1588774069265-79a0f5b7e5d4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6",
+    image: "https://picsum.photos/seed/eyecream1/800/600",
     desc: "Reduces puffiness and fine lines.",
   },
   {
@@ -76,8 +73,7 @@ const PRODUCTS = [
     name: "Volume Mascara",
     brand: "Forte",
     price: 549,
-    image:
-      "https://images.unsplash.com/photo-1526403224744-4b7c1b6054c6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8",
+    image: "https://picsum.photos/seed/mascara1/800/600",
     desc: "Buildable volume and definition.",
   },
   {
@@ -94,8 +90,7 @@ const PRODUCTS = [
     name: "Silk Hair Serum",
     brand: "Tress",
     price: 999,
-    image:
-      "https://images.unsplash.com/photo-1513682121636-2d1b8c4fb125?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=10",
+    image: "https://picsum.photos/seed/hairserum1/800/600",
     desc: "Smooths frizz and adds shine.",
   },
 ];
@@ -142,7 +137,9 @@ export default function Page() {
       <header className="bg-white shadow-sm sticky top-0 z-20">
         <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <div className="text-2xl font-bold">BeautyMarket</div>
+            <div className="text-2xl font-bold">
+              <Image src="/nykaa.png" alt="logo" width={100} height={100} />
+            </div>
             <div className="hidden md:block">
               <input
                 value={query}
