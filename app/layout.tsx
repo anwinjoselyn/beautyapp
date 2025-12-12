@@ -33,7 +33,7 @@ export default function RootLayout({
           src="http://localhost:3001/en/embed/loader"
           data-security-key="key123"
           data-domain="example.com"
-          data-brand="MyBrand"
+          data-brand="serenityjewels"
           defer
         ></Script>
 
